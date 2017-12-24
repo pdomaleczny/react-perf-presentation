@@ -1,7 +1,3 @@
-body * {
-    font-family: 'Roboto', sans-serif !important;
-}
-
 .reveal .header {
     font-weight: 300;
     font-size: 1.25em;
@@ -160,4 +156,8 @@ body * {
     display: block;
     font-weight: 300;
     font-size: 0.4em;
+}
+
+.reveal .future--spaced {
+    margin-top: 80px;
 }
