@@ -116,10 +116,139 @@
 					</section>
 				</section>
 				<section data-background-image="./images/background.jpg" >
-					<h1 class="victory"><span class="victory-v">P</span>ure Component</h1>
+					<section>
+						<h1 class="victory"><span class="victory-v">P</span>ure Component</h1>
+					</section>
+					<section>
+						<pre>
+							<code class="js" data-trim>
+							class DumbComponent extends Component {
+								shouldComponentUpdate(nextProps) {
+									if (this.props.value !== nextProps.value) {
+										return true;
+									} else {
+										return false;
+									}
+								}
+								render() {
+									return <div>foo</div>;
+								}
+							}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<pre>
+							<code class="js" data-trim>
+							class DumbComponent extends PureComponent {
+								render() {
+									return <div> {this.props.value} </div>;
+								}
+							}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<iframe src="https://giphy.com/embed/111ebonMs90YLu" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+					</section>
+					<section>
+						<iframe src="https://giphy.com/embed/iI6eeGjwScTCM" width="480" height="334" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+					</section>
 				</section>
 				<section data-background-image="./images/background.jpg" >
-					<h1 class="victory"><span class="victory-v">I</span>mmutable.js</h1>
+					<section>
+						<h1 class="victory"><span class="victory-v">I</span>mmutable.js</h1>
+					</section>
+					<section>
+						<pre>
+							<code class="js" data-trim>
+								const x = { id: "test" }
+								const y = x;
+								y.id = "test2"
+								x === y // true
+							</code>
+						</pre>
+					</section>
+					<section>
+						<pre>
+							<code class="js" data-trim>
+								import { Map } from "immutable"
+								const x = Map({ id: "test" })
+								const y = x.set("id", "test2")
+								x === y // false
+							</code>
+						</pre>
+					</section>
+					<section>
+						<pre>
+							<code class="js" data-trim>
+								const x = { id: "test" }
+								const y = {...x, id: "test2"}
+								const z = Object.assign({}, x ,{id: "test2"})
+								x === y // false
+								x === z // false
+							</code>
+						</pre>
+					</section>
+					<section>
+							<iframe src="https://giphy.com/embed/26FLbV3xS3ik4BM2I" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+					</section>
+					<section>
+						<pre>
+							<code class="js" data-trim>
+							class DumbComponent extends Component {
+								data = {
+									id: "initial",
+								};
+
+								change = () => {
+									this.data.id = "Test";
+								};
+
+								render() {
+									return ([
+										<TestComponent data={this.data}></TestComponent>
+										<button onClick={this.change}></button>
+									]);
+								}
+							}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<pre>
+							<code class="js" data-trim>
+							class DumbComponent extends Component {
+								data = Map({
+									id: "initial",
+								});
+
+								change = () => {
+									this.data = this.data.set("id", "Test");
+								};
+
+								render() {
+									return ([
+										<TestComponent data={this.data}></TestComponent>
+										<button onClick={this.change}></button>
+									]);
+								}
+							}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<ul>
+							<li>Easier to track changes</li>
+							<li>Be Eco – help garbage collector</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>Big – about 60kB+</li>
+							<li>Not efficient for small datasets</li>
+						</ul>
+					</section>
 				</section>
 				<section data-background-image="./images/background.jpg" >
 					<h1 class="victory"><span class="victory-v">L</span>ists</h1>

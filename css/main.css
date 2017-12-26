@@ -165,3 +165,9 @@
 .reveal .progress span {
     background-color: #F975F7 !important
 }
+
+.reveal li {
+    color: #F975F7;
+    font-style: italic;
+    line-height: 2em;
+}
