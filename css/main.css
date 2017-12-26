@@ -161,3 +161,7 @@
 .reveal .future--spaced {
     margin-top: 80px;
 }
+
+.reveal .progress span {
+    background-color: #F975F7 !important
+}

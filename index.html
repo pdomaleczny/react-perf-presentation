@@ -34,7 +34,95 @@
 					</div>
 				</section>
 				<section data-background-image="./images/background.jpg" >
-					<h1 class="victory"><span class="victory-v">R</span>eact</h1>
+					<section>
+						<h1 class="victory"><span class="victory-v">S</span>peed</h1>
+					</section>
+					<section>
+						<iframe src="https://giphy.com/embed/cKUhPEWExEAO4" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+					</section>
+					<section>
+						<iframe src="https://giphy.com/embed/xT5LMDHIuprP4r10vm" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+					</section>
+					<section>
+						<iframe src='https://gfycat.com/ifr/TalkativeUnacceptableIberianchiffchaff' frameborder='0' scrolling='no' width='640' height='368' allowfullscreen></iframe>
+					</section>
+				</section>
+				<section data-background-image="./images/background.jpg" >
+					<section>
+						<pre class="bash">
+							<code>NODE_ENV=production</code>
+						</pre>
+					</section>
+					<section>
+						<h1 class="victory"><span class="victory-v">R</span>eact 16</h1>
+					</section>
+					<section>
+						<h1 class="victory"><span class="victory-v">G</span>ZIP</h1>
+					</section>
+				</section>
+				<section data-background-image="./images/background.jpg">
+					<section>
+						<h1 class="victory"><span class="victory-v">C</span>ode splitting</h1>
+					</section>
+					<section>
+						<pre>
+							<code class="js" data-trim>
+									import Loadable from 'react-loadable';
+									import Loading from './Loading';
+									
+									const LoadableComponent = Loadable({
+										loader: () => import('./Dashboard'),
+										loading: Loading,
+									})
+									
+									export default class LoadableDashboard extends Component {
+										render() {
+										return <LoadableComponent></LoadableComponent>;
+										}
+									}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<img src="./images/chunks.png"/>
+					</section>
+				</section>
+				<section data-background-image="./images/background.jpg" >
+					<section>
+						<h1 class="victory"><span class="victory-v">F</span>unctions binding</h1>
+					</section>
+					<section>
+						<pre>
+							<code class="html" data-trim>
+								<TopBar onUpload="{this.handleUpload.bind(this)}"></TopBar>
+								<TopBar onUpload="{(files) => { this.handleUpload(files) }}"></TopBar>
+							</code>
+						</pre>
+					</section>
+					<section>
+						<pre>
+							<code class="js" data-trim>
+								class App extends Component {
+									constructor(props) {
+										super(props);
+										this.handleUpload = this.handleUpload.bind(this);
+									}
+									render() {
+										return (<TopBar onUpload={this.handleUpload} ></TopBar>);
+									}
+								}
+							</code>
+						</pre>
+					</section>
+				</section>
+				<section data-background-image="./images/background.jpg" >
+					<h1 class="victory"><span class="victory-v">P</span>ure Component</h1>
+				</section>
+				<section data-background-image="./images/background.jpg" >
+					<h1 class="victory"><span class="victory-v">I</span>mmutable.js</h1>
+				</section>
+				<section data-background-image="./images/background.jpg" >
+					<h1 class="victory"><span class="victory-v">L</span>ists</h1>
 				</section>
 			</div>
 		</div>
