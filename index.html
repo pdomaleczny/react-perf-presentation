@@ -33,6 +33,9 @@
 						<h2 class="cop">TO THE LIMITS</h2>
 					</div>
 				</section>
+				<section data-background-image="./images/background.jpg">
+					<img src="./images/me.png" />
+				</section>
 				<section data-background-image="./images/background.jpg" >
 					<section>
 						<h1 class="victory"><span class="victory-v">S</span>peed</h1>
@@ -111,6 +114,40 @@
 										return (<TopBar onUpload={this.handleUpload} ></TopBar>);
 									}
 								}
+							</code>
+						</pre>
+					</section>
+				</section>
+				<section data-background-image="./images/background.jpg" >
+					<section>
+						<h1 class="victory"><span class="victory-v">O</span>bject literals</h1>
+					</section>
+					<section>
+						<pre>
+							<code class="js" data-trim>
+								import React from 'react';
+								import MyTableComponent from './MyTableComponent';
+								
+								const Datagrid = (props) => (
+									<MyTableComponent style="{{ marginTop: 10 }}">
+										...
+									</MyTableComponent>
+								)
+							</code>
+						</pre>
+					</section>
+					<section>
+						<pre>
+							<code class="js" data-trim>
+								import React from 'react';
+								import MyTableComponent from './MyTableComponent';
+								
+								const tableStyle = { marginTop: 10 };
+								const Datagrid = (props) => (
+									<MyTableComponent style="{tableStyle}">
+										...
+									</MyTableComponent>
+								)
 							</code>
 						</pre>
 					</section>
@@ -251,7 +288,96 @@
 					</section>
 				</section>
 				<section data-background-image="./images/background.jpg" >
-					<h1 class="victory"><span class="victory-v">L</span>ists</h1>
+					<section>
+						<h1 class="victory"><span class="victory-v">M</span>emoization</h1>
+					</section>
+					<section>
+						<pre>
+							<code class="js" data-trim>
+								const add = (number1, number2) => {
+									return number1 + number2;
+								};
+								add(2, 4);
+							</code>
+						</pre>
+					</section>
+					<section>
+						<pre>
+							<code class="js" data-trim>
+								const Foo = ({bar, baz}) => {
+									return (<div> {bar}: {baz}</div>);
+								};
+							</code>
+						</pre>
+					</section>
+					<section>
+						<img src="./images/memoize.png" />
+					</section>
+					<section>
+						<pre>
+							<code class="js" data-trim>
+								const Foo = ({bar, baz}) => {
+									return (<div> {bar}: {baz}</div>);
+								};
+
+								export default moize(Foo, {
+									isReact: true
+								});
+
+								export default moize.react(Foo);
+							</code>
+						</pre>
+					</section>
+					<section>
+						<iframe src="https://giphy.com/embed/ANbD1CCdA3iI8" width="480" height="361" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+					</section>
+					<section>
+						<ul>
+							<li>The input values will change rarely</li>
+							<li>The component is not reused in a variety of contexts</li>
+						</ul>
+					</section>
+					<section>
+						<pre>
+							<code class="js" data-trim>
+								const MemoizedFoo = moize.react(Foo, {
+									maxSize: 5
+								});
+
+								const MemoizedFoo = moize.reactSimple(Foo);
+							</code>
+						</pre>
+					</section>
+					<section>
+						<pre>
+							<code class="js" data-trim>
+								import moize from 'moize';
+								// this component will export a non-memoized version
+								import Foo from './components/Foo';
+								const MemoizedFoo = moize.react(Foo);
+								const Consumer = () => {
+								  <div>
+									I will memoize the following entry:
+									<MemoizedFoo></MemoizedFoo>
+								  </div>
+								};
+							</code>
+						</pre>
+					</section>
+				</section>
+				<section data-background-image="./images/background.jpg" >
+					<section>
+						<h1 class="victory"><span class="victory-v">L</span>ists</h1>
+					</section>
+					<section>
+						<iframe src="https://giphy.com/embed/7CmL2u8CL1hzq" width="432" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+					</section>
+					<section>
+						<img src="./images/virtual-lists.png" />
+					</section>
+					<section>
+						<iframe src="https://bvaughn.github.io/react-virtualized/#/components/List" width="1024" height="680" allowFullScreen></iframe>
+					</section>
 				</section>
 			</div>
 		</div>
