@@ -240,6 +240,7 @@
 
 								change = () => {
 									this.data.id = "Test";
+									this.forceUpdate();
 								};
 
 								render() {
@@ -262,6 +263,7 @@
 
 								change = () => {
 									this.data = this.data.set("id", "Test");
+									this.forceUpdate();
 								};
 
 								render() {
@@ -378,6 +380,12 @@
 					<section>
 						<iframe src="https://bvaughn.github.io/react-virtualized/#/components/List" width="1024" height="680" allowFullScreen></iframe>
 					</section>
+				</section>
+				<section data-background-image="./images/background.jpg" >
+					<h1 class="victory"><span class="victory-v">W</span>hat next?</h1>
+				</section>
+				<section data-background-image="./images/background.jpg" >
+					<h1 class="victory"><span class="victory-v">T</span>hanks</h1>
 				</section>
 			</div>
 		</div>
